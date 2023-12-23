@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&display=swap');
+
+:root {
+    --primary-color: #3253e5;
+    --secondary-color: #d9f8e0;
+    --dark-secondary-color: #93fa8d;
+    --dark-color: #000000;
+    --light-color: #f4f4f4;
+    --danger-color: #dc3545;
+    --success-color: #28a745;
+    --chat-window: #343540;
+}
+
+/* HomePage Styles */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gabarito', sans-serif;
+    box-sizing: content-box;
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.left {
+    padding: 20px;
+    width: 46%;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.left label {
+    font-size: 2.3rem;
+    font-weight: bolder;
+}
+
+.left .greet {
+    margin-top: 16.5rem;
+    font-size: 2.5rem;
+}
+
+.right {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.right p {
+    margin: 10px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: 0px;
+    border-radius: 5px;
+    padding: 10px 100px;
+    font-size: 1.2rem;
+}
+
+button a {
+    color: var(--light-color);
+    text-decoration: none;
+}
+
+.right .btn .btn-link {
+    padding-right: 10px;
+}
+
+/* Homepage style ends */
+
+.flex-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100vh;
+}
+
+.flex-box h1 {
+    font-size: 2.8rem;
+    color: var(--dark-color);
+}
+
+.flex-box input[type=email],
+input[type=text],
+input[type=password] {
+    font-size: 1rem;
+    padding: 10px 100px;
+    padding-left: 10px;
+}
+
+.flex-box .btn {
+    padding: 10px 125px;
+}
+
+/* Navbar  */
+
+.flex-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar {
+    background-color: var(--dark-secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding: 7px 0px;
+    top: 0;
+    opacity: 0.9;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 0.45rem;
+    margin: 0 0.1rem;
+}
+
+.navbar a:hover {
+    color: var(--primary-color);
+}
+
+.navbar ul {
+    width: 40%;
+    list-style: none;
+}
+
+.navbar .welcome span {
+    margin-right: 0.6rem;
+}
+
+.dashboard-content {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.bot-icon {
+    width: 100%;
+}
+
+/* Sidebar */
+
+.side-bar {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    width: 360px;
+    transition: all 0.3s ease-in;
+}
+
+.align {
+    display: flex;
+    gap: 10px;
+    font-size: 1.4rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.chat-window,
+.user-details,
+.curr-user-info {
+    background-color: var(--chat-window);
+    color: var(--light-color);
+    width: 100%;
+}
+
+.no-of-chats {
+    height: 440px;
+}
+
+.user-info-active {
+    background-color: #343540;
+}
+
+.user-info-link {
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.user-info {
+    padding: 20px;
+    font-size: 1.1rem;
+}
+
+.user-info p {
+    margin: 0px 0px 2px 0px;
+    font-size: 1.3rem;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.user-info p:hover {
+    background-color: #343540;
+}
+
+.user-info a {
+    color: var(--light-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.user-info a p{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+/* User Details Form */
+
+.user-info-form {
+    font-size: 1.4rem;
+}
+
+.user-details,
+.curr-user-info {
+    padding: 40px;
+    overflow-y: scroll;
+}
+
+.chat-window {
+    padding: 0px 40px 40px 20px;
+}
+
+.user-details fieldset {
+    margin-bottom: 30px;
+}
+
+.user-details fieldset legend {
+    font-size: 1.7rem;
+}
+
+.user-details .user-info-form [type=text],
+#email,
+input[type=number],
+input[type=date],
+.chat-form input {
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+
+.user-details input[type=radio] {
+    font-size: 1rem;
+}
+
+.user-details input:focus,
+.chat-form input {
+    outline: none;
+}
+
+.personal-info>div,
+.contact>div,
+.name>div,
+.location>div,
+.edu>div,
+.skill-section>div,
+.career>div {
+    margin-bottom: 20px;
+}
+
+
+.fname,
+.lname,
+.email,
+.number,
+.current-city,
+.preferred-location,
+.date-of-birth,
+.gender,
+.level,
+.field-of-study,
+.year,
+.skills,
+.hobbies,
+.role,
+.job-type,
+.salary {
+    display: flex;
+    gap: 70px;
+}
+
+.fname label,
+.lname label,
+.email label,
+.number label,
+.current-city label,
+.preferred-location label,
+.date-of-birth label,
+.level label,
+.field-of-study label,
+.year label,
+.skills label,
+.hobbies label,
+.role label,
+.job-type label,
+.salary label {
+    width: 20%;
+}
+
+.fname input,
+.lname input,
+.email input,
+.number input,
+.current-city input,
+.preferred-location input,
+.date-of-birth input,
+.level input,
+.field-of-study input,
+.year input,
+.skills input,
+.hobbies input,
+.role input,
+.job-type input,
+.salary input {
+    width: 60%;
+}
+
+.gender-section {
+    margin-left: 146px;
+}
+
+.gender-type {
+    display: flex;
+    gap: 20px;
+}
+
+.user-details button {
+    margin-right: 20px;
+}
+
+/* chatWindow */
+
+.chat-window-navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+
+.chat-window-navbar ul {
+    padding-left: 0px;
+    margin-top: 20px;
+}
+
+.chat-window-navbar ul li {
+    font-size: 1.5rem;
+}
+
+.chats {
+    height: 550px;
+    margin: 10px 100px 0px 100px;
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+.chat-form {
+    display: flex;
+    justify-content: center;
+}
+
+.chats div {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    font-size: 1.3rem;
+}
+
+.chat-form input {
+    width: 60%;
+}
+
+/* Spinner */
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 4px solid #3498db;
+    /* Set the color of the spinner */
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    /* Configure the animation duration and type */
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Add this CSS in your stylesheet */
+::-webkit-scrollbar {
+    width: 12px;
+    /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--dark-color);
+    /* Color of the scrollbar thumb */
+    border-radius: 6px;
+    /* Rounded corners of the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--chat-window);
+    /* Color of the scrollbar thumb on hover */
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--chat-window);
+    /* Color of the scrollbar track */
+}
+
+::-webkit-scrollbar-track:hover {
+    background-color: var(--chat-window);
+    /* Color of the scrollbar track on hover */
+}
