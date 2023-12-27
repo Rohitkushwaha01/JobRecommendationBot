@@ -11,6 +11,7 @@ export const AuthProvider = ({ children }) => {
     let [currentUser, setCurrentUser] = useState({})
     let [currentUserDetails, setCurrentUserDetails] = useState({});
     let [chat, setChat] = useState([]);
+    let [chatResponse, setChatResponse] = useState([]);
 
     let currentUserName = ""
 
@@ -197,6 +198,31 @@ export const AuthProvider = ({ children }) => {
             return err.response.data.errors[0].message;
         }
     }
+
+
+    const chatting = async (userInput) => {
+        const config = {
+            headers: {
+                'Content-Type': 'application/json',
+                'x-auth-token': localStorage.getItem('token')
+            }
+        }
+
+        setChat((prevChat) => [...prevChat, { user: 'You', text: userInput }]);
+        const body = JSON.stringify({ userInput });
+        console.log(body)
+        try {
+            const res = await axios.post('http://localhost:3000/api/chatbot/', body, config);
+            setChatResponse((prevChat) => [...prevChat, { user: 'Chatbot', text: res.data }]);
+            return res.data;
+        }
+        catch (err) {
+            console.log(err);
+            console.log(err.response.data.errors[0].message)
+            return err.response.data.errors[0].message
+        }
+
+    }
    
 
 
@@ -210,11 +236,14 @@ export const AuthProvider = ({ children }) => {
                 fullUserInfo,
                 setAuthenticated,
                 setChat,
+                setChatResponse,
+                chatting,
                 chat,
+                chatResponse,
                 currentUserName,
                 isAuthenticated,
                 currentUser,
-                currentUserDetails
+                currentUserDetails,
             }}>
             {children}
         </AuthContext.Provider>

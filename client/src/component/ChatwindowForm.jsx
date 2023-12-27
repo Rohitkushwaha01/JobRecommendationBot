@@ -6,11 +6,12 @@ import AuthContext from '../context/AuthenticationContext/auth.context';
 export default function ChatwindowForm() {
 
     const [eachChat, setEachChat] = useState("")
-    const { chat, setChat } = useContext(AuthContext);
+    const { chatting } = useContext(AuthContext);
 
     const handleChat = (e) => {
         e.preventDefault();
         setEachChat(e.target.value)
+        console.log(eachChat)
     }
 
     const handleSendChat = (e) => {
@@ -18,8 +19,8 @@ export default function ChatwindowForm() {
         if(eachChat == '' || eachChat == " "){
             return
         }
-        setChat((prevChat) => [...prevChat, { user: 'You', text: eachChat }]);
         setEachChat('');
+        chatting(eachChat);
     };
 
     return (

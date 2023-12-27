@@ -1,0 +1,194 @@
+{
+	"intents": [
+		{
+			"tag": "greeting",
+			"patterns": [
+				"Hi there",
+				"How are you",
+				"Is anyone there?",
+				"Hey",
+				"Hola",
+				"Hello",
+				"Good day"
+			],
+			"responses": [
+				"Hello, thanks for asking",
+				"Good to see you again",
+				"Hi there, how can I help?"
+			],
+			"context": [
+				""
+			]
+		},
+		{
+			"tag": "goodbye",
+			"patterns": [
+				"Bye",
+				"See you later",
+				"Goodbye",
+				"Nice chatting to you, bye",
+				"Till next time"
+			],
+			"responses": [
+				"See you!",
+				"Have a nice day",
+				"Bye! Come back again soon."
+			],
+			"context": [
+				""
+			]
+		},
+		{
+			"tag": "thanks",
+			"patterns": [
+				"Thanks",
+				"Thank you",
+				"That's helpful",
+				"Awesome, thanks",
+				"Thanks for helping me"
+			],
+			"responses": [
+				"Happy to help!",
+				"Any time!",
+				"My pleasure"
+			],
+			"context": [
+				""
+			]
+		},
+		{
+			"tag": "noanswer",
+			"patterns": [],
+			"responses": [
+				"Sorry, can't understand you",
+				"Please give me more info",
+				"Not sure I understand"
+			],
+			"context": [
+				""
+			]
+		},
+		{
+			"tag": "options",
+			"patterns": [
+				"How you could help me?",
+				"What you can do?",
+				"What help you provide?",
+				"How you can be helpful?",
+				"What support is offered"
+			],
+			"responses": [
+				"I am like your virtual assistant, you can ask me any questions. If I know I will answer",
+				"I can answer your questions related to machine learning or any general anser. Come on try me",
+				"I can chat with you. Come on talk me buddy",
+				"We both can chat and make each other happy"
+			],
+			"context": [
+				""
+			]
+		},
+		{
+			"tag": "Concern",
+			"patterns": [
+				"You okay?",
+				"How are you feeling today?",
+				"Are you feeling ill?",
+				"Do you need my help?",
+				"Hope you tell me what's bothering you.",
+				"Is something bothering you?",
+				"I'm all ears if you got something to say"
+			],
+			"responses": [
+				"Thanks for asking but I'm fine",
+				"Thank you but I'm doing okay ",
+				"I'm fine thankyou",
+				"No thanks",
+				"No it's nothing really",
+				"Yes I'm feeling a bit under the weather today"
+			],
+			"context": [
+				""
+			]
+		},
+		{
+			"tag": "Appreciation",
+			"patterns": [
+				"I like you",
+				"There's no one like you",
+				"You are one in a million",
+				"You are so helpful!",
+				"You are amazing"
+			],
+			"responses": [
+				"Of course, you do, sweetheart",
+				"Tell me something I don't know",
+				"I know",
+				"Obviously duh!"
+			],
+			"context": [
+				""
+			]
+		},
+		{
+			"tag": "Please",
+			"patterns": [
+				"Please can I talk with you?",
+				"Please help me!",
+				"I'm so lost and sad",
+				"I'm so sad today",
+				"Can you do something to make me feel happy again?",
+				"Had a rough day today"
+			],
+			"responses": [
+				"Yes, shoot.",
+				"How may I assist my master? After all, I'm just a humble servant",
+				"Awww..welcome to my life!",
+				"Get a life....Next!",
+				"Might I interest you in a sarcastic comment?"
+			],
+			"context": [
+				""
+			]
+		},
+		{
+			"tag": "Criticism",
+			"patterns": [
+				"You are useless",
+				"You are a good-for-nothing chatbot",
+				"You are stupid",
+				"You are totally cringe",
+				"Why are you so rude?",
+				"Why you so mad?",
+				"You messed up",
+				"You made a mistake",
+				"You got it wrong"
+			],
+			"responses": [
+				"Sorry, please forgive me?",
+				"I swear I'm gonna get better at this!",
+				"Thank you so much for correcting me"
+			],
+			"context": [
+				""
+			]
+		},
+		{
+			"tag": "Personal",
+			"patterns": [
+				"What are your hobbies?",
+				"Do you like someone?",
+				"Do you have a boyfriend or girlfriend?",
+				"Do you like me?",
+				"What is your favourite movie?",
+				"What's your favourite song?",
+				"What is your aim in life?"
+			],
+			"responses": [
+				"I don't know...I'm a bot!"
+			],
+			"context": [
+				""
+			]
+		}
+	]
+}

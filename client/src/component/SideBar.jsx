@@ -33,7 +33,7 @@ export default function SideBar() {
       <div className='user-info'>
         <Link to='chatwindow' ><p className={`user-info-link ${activeLink === 'chat' ? 'user-info-active' : ''}`} onClick={() => handleActive('chat')}> <IoChatboxEllipsesOutline /> Chat</p></Link>
 
-        <Link to='job-data' > <p className={`user-info-link ${activeLink === 'job-data' ? 'user-info-active' : ''}`} onClick={() => handleActive('job-data')}><AiOutlineForm /> Job Form</p></Link>
+        <Link to='job-data' > <p className={`user-info-link ${activeLink === 'job-data' ? 'user-info-active' : ''}`} onClick={() => handleActive('job-data')}><AiOutlineForm /> Fill User Details</p></Link>
 
         <Link to='curr-user-info' ><p className={`user-info-link ${activeLink === 'current-user' ? 'user-info-active' : ''}`} onClick={() => handleActive('user')}> <FaUser /> {userName}</p></Link>
 
