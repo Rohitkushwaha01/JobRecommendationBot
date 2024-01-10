@@ -1,6 +1,19 @@
 {
 	"intents": [
 		{
+			"tag": "Master",
+			"patterns":[
+				"Who invented You?",
+				"Who is your creator",
+				"can you tell me who made you",
+				"can you tell me who created you",
+				"What is the name of your master"
+			],
+			"responses":[
+				"Hello! I'm a chatbot created by Rohit Kushwaha as part of a Final Year Project, with assistance from Ankit Vardhaman and Tejal Shinde. Our project was guided by Mahua Bhowmik. I'm built using React.js for the frontend, Node.js for the backend, and Python.. My main purpose is to recommend jobs based on user profiles and suggest relevant resources. If you have any questions about my development or how I can assist you, feel free to ask "
+			]
+		},
+		{
 			"tag": "greeting",
 			"patterns": [
 				"Hi there",
@@ -12,9 +25,11 @@
 				"Good day"
 			],
 			"responses": [
-				"Hello, thanks for asking",
-				"Good to see you again",
-				"Hi there, how can I help?"
+				"Hello, Good to see you again",
+				"Hello! How can I assist you today?",
+				"Hello, If you have any questions or if there's something specific you'd like to discuss, feel free to let me know!",
+				"Hi there, how can I help?",
+				"Greetings! How can I assist you today?"
 			],
 			"context": [
 				""
@@ -185,6 +200,158 @@
 			],
 			"responses": [
 				"I don't know...I'm a bot!"
+			],
+			"context": [
+				""
+			]
+		},
+		{
+			"tag":  "job realted",
+			"patterns": [
+				"What are the current job market trends?",
+				"Can you help me create a resume?",
+				"How can I prepare for a job interview?",
+				"Can you suggest online platforms for job searching?",
+				" What's the best way to approach a career transition?"
+			],
+			"responses": [
+				"The current job market trends vary, but there's a notable demand for skills in [mention specific skills], and industries like [highlight relevant industries] are experiencing growth.",
+				"Certainly! I can provide guidance on structuring your resume, emphasizing key skills and achievements, and tailoring it to the specific job you're applying for.",
+				"To prepare for a job interview, research the company, practice common interview questions, and be ready to showcase how your skills align with the job requirements.",
+				"Certainly! Platforms like LinkedIn, Indeed, and Glassdoor are popular for job searching. Additionally, industry-specific job boards can be beneficial.",
+				" A successful career transition involves identifying transferable skills, acquiring new ones if necessary, networking in the desired industry, and showcasing relevant experiences on your resume."
+			],
+			"context": [
+				""
+			]
+		},
+		{
+			"tag":  "Salary realted",
+			"patterns": [
+				"Is it appropriate to discuss salary expectations in a job interview?",
+				"What factors should I consider when evaluating a job offer beyond the salary?",
+				" Can you provide tips for negotiating a higher salary when transitioning to a new role?",
+				"How can I address a situation where I feel I'm being underpaid compared to industry standards?"
+			],
+			"responses": [
+				"It's generally best to wait until you've received a job offer to discuss specific numbers. However, it's acceptable to inquire about the salary range or benefits during the later stages of the interview process.In addition to salary, consider benefits, work-life balance, career growth opportunities, and the overall company culture. Assess the entire package to make an informed decision.Emphasize your relevant skills, experience, and achievements during the negotiation. Research the market value for the role and be confident in presenting your case for a higher salary.",
+				" Express your concerns professionally and provide evidence of industry salary standards. Focus on the value you bring to the company and how an adjustment aligns with fair compensation practices."
+			],
+			"context": [
+				""
+			]
+		},
+		{
+			"tag":  "job finding question",
+			"patterns": [
+				"Can you help me find entry-level positions in [full stack developer]?"
+				
+			],
+			"responses": [
+				"Explore job search platforms like LinkedIn, Indeed, Glassdoor, and SimplyHired. Use keywords such as entry-level full stack developer or junior web developer to narrow down relevant listings",
+				"Check the career pages of companies you are interested in. Many organizations post job openings directly on their websites. Look for positions like 'Junior Full Stack Developer' or 'Entry-Level Web Developer'.",
+				"Create and update your GitHub profile with projects that showcase your coding skills. Many employers in the tech industry review GitHub repositories to assess a candidate's abilities."
+			],
+			"context": [
+				""
+			]
+		},
+		{
+			"tag":  "full stack developer",
+			"patterns": [
+				"Can you help me find entry-level positions in [full stack developer]?"
+				
+			],
+			"responses": [
+				"Explore job search platforms like LinkedIn, Indeed, Glassdoor, and SimplyHired. Use keywords such as entry-level full stack developer or junior web developer to narrow down relevant listings",
+				"Check the career pages of companies you are interested in. Many organizations post job openings directly on their websites. Look for positions like 'Junior Full Stack Developer' or 'Entry-Level Web Developer'.",
+				"Create and update your GitHub profile with projects that showcase your coding skills. Many employers in the tech industry review GitHub repositories to assess a candidate's abilities."
+			],
+			"context": [
+				""
+			]
+		},
+		{
+			"tag":  "job enquries",
+			"patterns": [
+				"Can you tell me about the application process?",
+				"What qualifications are you looking for in a candidate?",
+				"Are there opportunities for career growth and development?",
+				"What benefits and perks does the company provide?"
+				
+			],
+			"responses": [
+				"Certainly! To apply, visit our careers page [link] and select the position you're interested in. Follow the instructions to submit your resume and any required documents. Our HR team will review your application, and if your qualifications match our requirements, you may be contacted for an interview.",
+				"The specific qualifications vary based on the position, but generally, we look for candidates with [education level], [experience in relevant field], and proficiency in [specific skills]. You can find detailed requirements in the job listings on our careers page.",
+				"Absolutely! We prioritize the professional growth of our employees. We offer various training programs, mentorship opportunities, and advancement possibilities within the company. Our commitment is to help you develop and achieve your career goals.",
+				"Our employees enjoy a comprehensive benefits package, including [list specific benefits such as health insurance, retirement plans, etc.]. Additionally, we offer perks like [mention any unique perks or programs]. You can find more details in our employee handbook or on the benefits page of our website."
+
+			],
+			"context": [
+				""
+			]
+		},
+		{
+			"tag":  "job enquries",
+			"patterns": [
+				"Where is the company located?",
+				"Are remote work options available?",
+				" Can you provide more details about the office facilities?",
+				"What is the commute like to the office?",
+				" How often is travel required for this position?"
+
+				
+			],
+			"responses": [
+				"Our headquarters is located in [City, State/Country]. Additionally, we have [number] offices in different locations. You can find the specific address and contact details on our website's 'Contact Us' page.",
+				"Yes, we offer remote work options for certain positions. The availability of remote work depends on the nature of the role and team requirements. Job listings on our website will specify whether the position allows remote work.",
+				" Can you provide more details about the office facilities?",
+				"The commute can vary depending on your location and the office you'll be working at. We recommend checking local transportation options or using online maps to estimate commute times. Additionally, our HR team can provide information about commuting options and any company-sponsored transportation initiatives.",
+				"Travel requirements depend on the specific role. Job descriptions usually outline the expected travel frequency. During the interview process, our team will provide more details about travel expectations and any associated policies."
+
+			],
+			"context": [
+				""
+			]
+		},
+		{
+			"tag":  "transport enquries",
+			"patterns": [
+				"What public transportation options are available near the office?",
+				"Is there onsite parking available for employees?",
+				"Are there any commuting benefits or programs offered by the company?",
+				"Can employees work flexible hours to avoid peak traffic times?",
+				"Is there a shuttle service provided by the company?"
+
+
+				
+			],
+			"responses": [
+				" Our office is conveniently located near [bus stops, train stations, etc.]. You can check local transit schedules and routes to find the most convenient public transportation options for your commute.",
+				"Yes, we provide onsite parking for employees. The parking facilities are [describe parking arrangements, such as designated lots or parking garages]. Details about parking passes and availability can be obtained through our HR department.",
+				"We offer [mention commuting benefits, such as subsidized public transportation passes, carpooling programs, etc.]. Our goal is to support sustainable commuting options and make the commute to work as convenient as possible.",
+				"Yes, we understand the challenges of commuting during peak hours. We offer flexible work hours for employees, allowing them to choose schedules that suit their needs while considering traffic patterns and transportation options.",
+				"Currently, we do not provide a shuttle service. However, we actively explore ways to enhance commuting options for our employees. Check with our HR department for any updates or changes to transportation services."
+			],
+			"context": [
+				""
+			]
+		},
+		{
+			"tag":  "study related",
+			"patterns": [
+				"How important is a college degree for getting a job?",
+				"What can I do to stand out during a job interview?",
+				"What are the current trends in resume writing?",
+				"How important is networking in finding a job?"
+				
+			],
+			"responses": [
+				"The importance of a college degree varies depending on the industry and job. In some fields, a degree is a prerequisite, while in others, practical experience and skills may weigh more heavily. It's essential to research the specific requirements of the desired job and industry.",
+				" To stand out in a job interview, prepare thoroughly by researching the company, practicing common interview questions, and showcasing your relevant skills and achievements. Dress professionally, demonstrate enthusiasm, and ask thoughtful questions about the company and position. Follow up with a thank-you email to express your continued interest.",
+				"Current trends in resume writing include using a clean and modern format, emphasizing quantifiable achievements, and tailoring your resume to each job application. Incorporate keywords from the job description and consider including a brief summary or branding statement at the beginning to grab the employer's attention.",
+				"Networking is highly important in finding a job. Many job opportunities are filled through personal connections and referrals. Attend industry events, join professional organizations, and leverage online platforms like LinkedIn to build and nurture your network. Personal connections can provide valuable insights, recommendations, and job leads."
+
 			],
 			"context": [
 				""

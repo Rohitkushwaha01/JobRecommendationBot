@@ -380,7 +380,7 @@ input[type=date],
 
 .chats div {
     background-color: var(--secondary-color);
-    color: var(--primary-color);
+    color: var(--light-color);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 12px;
@@ -389,6 +389,15 @@ input[type=date],
 
 .chat-form input {
     width: 60%;
+}
+
+.user{
+    background-color:#67697b !important;
+    
+}
+
+.chatbot{
+    background-color: #1c1d22 !important;
 }
 
 /* Spinner */
@@ -417,7 +426,7 @@ input[type=date],
 
 /* Add this CSS in your stylesheet */
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 8px;
     /* Width of the scrollbar */
 }
 
@@ -442,3 +451,5 @@ input[type=date],
     background-color: var(--chat-window);
     /* Color of the scrollbar track on hover */
 }
+
+

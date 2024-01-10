@@ -10,8 +10,9 @@ export const AuthProvider = ({ children }) => {
     let [isAuthenticated, setAuthenticated] = useState(false);
     let [currentUser, setCurrentUser] = useState({})
     let [currentUserDetails, setCurrentUserDetails] = useState({});
-    let [chat, setChat] = useState([]);
-    let [chatResponse, setChatResponse] = useState([]);
+    // let [chat, setChat] = useState([]);
+    let [chatMessages, setChatMessages] = useState([]);
+    
 
     let currentUserName = ""
 
@@ -21,48 +22,48 @@ export const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         const checkAuthentication = async () => {
-          const token = localStorage.getItem('token');
-    
-          if (token) {
-            setAuthenticated(true)
-          } else {
-            setAuthenticated(false)
-            handleLogout();
-          }
+            const token = localStorage.getItem('token');
+
+            if (token) {
+                setAuthenticated(true)
+            } else {
+                setAuthenticated(false)
+                handleLogout();
+            }
         };
-    
+
         checkAuthentication();
-    
+
         const handleBeforeUnload = (event) => {
             const confirmationMessage = 'Are you sure you want to leave?';
-      
+
             // Display the confirmation message in modern browsers
             event.returnValue = confirmationMessage;
-      
+
             // Display the confirmation message in legacy IE
             return confirmationMessage;
-          };
-      
-          const handleUnload = () => {
+        };
+
+        const handleUnload = () => {
             // Perform additional cleanup or actions before the page is unloaded
             // ...
-      
+
             // Optional: Perform the logout action
             handleLogout();
-          };
-      
-          // Attach the beforeunload event listener
-          window.addEventListener('beforeunload', handleBeforeUnload);
-      
-          // Attach the unload event listener
-          window.addEventListener('unload', handleUnload);
-      
-          // Cleanup the event listeners when the component unmounts
-          return () => {
+        };
+
+        // Attach the beforeunload event listener
+        window.addEventListener('beforeunload', handleBeforeUnload);
+
+        // Attach the unload event listener
+        window.addEventListener('unload', handleUnload);
+
+        // Cleanup the event listeners when the component unmounts
+        return () => {
             window.removeEventListener('beforeunload', handleBeforeUnload);
             window.removeEventListener('unload', handleUnload);
-          };
-      }, []);
+        };
+    }, []);
 
     const register = async (name, email, password) => {
         const config = {
@@ -113,8 +114,9 @@ export const AuthProvider = ({ children }) => {
 
     }
 
-    const handleLogout = ()=>{
+    const handleLogout = () => {
         localStorage.removeItem('token');
+        setChatMessages([]);
         setAuthenticated(false)
     }
 
@@ -189,7 +191,6 @@ export const AuthProvider = ({ children }) => {
         try {
             const res = await axios.get(`http://localhost:3000/api/userdetails/`, config);
             setCurrentUserDetails(res.data);
-
             return res.data;
         }
         catch (err) {
@@ -208,12 +209,18 @@ export const AuthProvider = ({ children }) => {
             }
         }
 
-        setChat((prevChat) => [...prevChat, { user: 'You', text: userInput }]);
         const body = JSON.stringify({ userInput });
         console.log(body)
         try {
             const res = await axios.post('http://localhost:3000/api/chatbot/', body, config);
-            setChatResponse((prevChat) => [...prevChat, { user: 'Chatbot', text: res.data }]);
+
+            // Add the chatbot's response to the chat messages array
+            setChatMessages(prevMessages => [
+                ...prevMessages,
+                { type: 'chatbot', text: res.data.response }
+            ]);
+
+            console.log(res.data)
             return res.data;
         }
         catch (err) {
@@ -223,7 +230,7 @@ export const AuthProvider = ({ children }) => {
         }
 
     }
-   
+
 
 
     return (
@@ -235,11 +242,11 @@ export const AuthProvider = ({ children }) => {
                 userDetails,
                 fullUserInfo,
                 setAuthenticated,
-                setChat,
-                setChatResponse,
+                chatMessages,
+                setChatMessages,
                 chatting,
-                chat,
-                chatResponse,
+                // chat,
+                // chatResponse,
                 currentUserName,
                 isAuthenticated,
                 currentUser,
