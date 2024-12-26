@@ -1,4 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://rohitkushwaha:rony@cluster0.gotayl4.mongodb.net/DynamicBot",
+    "mongoURI": "mongodb+srv://rohitkushwaha:Pass@cluster0.gotayl4.mongodb.net/DynamicBot",
     "jwtToken": "Rohit-Ankit-Tejal-Final-Year-project-2024"
 }
